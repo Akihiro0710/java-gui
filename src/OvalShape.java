@@ -10,6 +10,10 @@ public class OvalShape extends AbstractShape {
 
     @Override
     public void paint(Graphics2D g) {
+        int x = getX() + dx;
+        int y = getY() + dy;
+        setX(x);
+        setY(y);
         g.fillOval(getX(), getY(), getWidth(), getHeight());
     }
 }

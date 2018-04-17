@@ -1,16 +1,21 @@
 /**
  * Created by ta on 2018/04/17.
  */
-public abstract class AbstractShape implements Paintable{
+public abstract class AbstractShape implements Paintable {
     private int x;
     private int y;
     private int width;
     private int height;
-    public AbstractShape(int x, int y, int width, int height){
+    protected int dx;
+    protected int dy;
+
+    public AbstractShape(int x, int y, int width, int height) {
         this.x = x;
         this.y = y;
         this.width = width;
         this.height = height;
+        this.dx = 10;
+        this.dy = 10;
     }
 
     public int getX() {

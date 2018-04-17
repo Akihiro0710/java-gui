@@ -14,15 +14,7 @@ public class Panel extends JPanel {
 
     private Paintable initShape() {
         OvalShape shape = new OvalShape(10, 10, 10);
-        int dx = 10;
-        int dy = 10;
-        new Timer(100, e -> {
-            int x = shape.getX() + dx;
-            int y = shape.getY() + dy;
-            shape.setX(x);
-            shape.setY(y);
-            repaint();
-        }).start();
+        new Timer(100, e -> repaint()).start();
         return shape;
     }
 
