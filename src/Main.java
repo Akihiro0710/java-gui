@@ -3,6 +3,8 @@
  */
 public class Main {
     public static void main(String[] args) {
-        System.out.println("Hello, JAVA GUI");
+        System.out.println("Hello, Java GUI");
+        Screen screen = new Screen("Java GUI");
+        screen.setVisible(true);
     }
 }
