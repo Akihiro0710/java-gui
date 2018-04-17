@@ -9,7 +9,12 @@ public class Panel extends JPanel {
 
     public Panel() {
         super();
-        paintable = new OvalShape(10, 10, 10);
+        paintable = initShape();
+    }
+
+    private Paintable initShape() {
+        OvalShape shape = new OvalShape(10, 10, 10);
+        return shape;
     }
 
     @Override
