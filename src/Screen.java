@@ -8,5 +8,6 @@ public class Screen extends JFrame {
         super(title);
         setSize(400, 300);
         setLocation(100, 100);
+        setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
     }
 }
