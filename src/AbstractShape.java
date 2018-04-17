@@ -1,9 +1,7 @@
-import java.awt.*;
-
 /**
  * Created by ta on 2018/04/17.
  */
-public abstract class AbstractShape {
+public abstract class AbstractShape implements Paintable{
     private int x;
     private int y;
     private int width;
@@ -46,6 +44,4 @@ public abstract class AbstractShape {
     public void setHeight(int height) {
         this.height = height;
     }
-
-    public abstract void paint(Graphics2D g);
 }
