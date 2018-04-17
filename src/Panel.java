@@ -14,7 +14,10 @@ public class Panel extends JPanel {
 
     private Paintable initShape() {
         OvalShape shape = new OvalShape(10, 10, 10);
-        new Timer(100, e -> repaint()).start();
+        new Timer(100, e -> {
+            shape.update(getWidth(), getHeight());
+            repaint();
+        }).start();
         return shape;
     }
 

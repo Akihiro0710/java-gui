@@ -49,4 +49,6 @@ public abstract class AbstractShape implements Paintable {
     public void setHeight(int height) {
         this.height = height;
     }
+
+    public abstract void update(int width, int height);
 }
