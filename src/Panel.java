@@ -1,5 +1,7 @@
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 /**
  * Created by ta on 2018/04/17.
@@ -14,10 +16,14 @@ public class Panel extends JPanel {
 
     private Paintable initShape() {
         OvalShape shape = new OvalShape(10, 10, 10);
-        new Timer(100, e -> {
-            shape.update(getWidth(), getHeight());
-            repaint();
-        }).start();
+        Timer timer = new Timer(30, new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                shape.update(getWidth(), getHeight());
+                repaint();
+            }
+        });
+        timer.start();
         return shape;
     }
 
